@@ -2,10 +2,13 @@
   "name": "product-app",
   "version": "1.0.0",
   "scripts": {
+    "start:backend": "cd backend && npm run start:dev",
+    "start:frontend": "cd frontend && npm start",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
   },
   "devDependencies": {
-    "concurrently": "^6.2.0"
+    "concurrently": "^6.2.0",
+     "@babel/plugin-transform-private-property-in-object": "^7.23.4"
   }
 }
